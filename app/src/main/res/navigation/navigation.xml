@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/saveRiminderFragment2">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.finalprojectlocation.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/saveRiminderFragment2"
+        android:name="com.example.finalprojectlocation.saveRiminderFragment"
+        android:label="fragment_save_riminder"
+        tools:layout="@layout/fragment_save_riminder" >
+        <action
+            android:id="@+id/action_saveRiminderFragment2_to_reminderListFragment2"
+            app:destination="@id/reminderListFragment2" />
+        <action
+            android:id="@+id/action_saveRiminderFragment2_to_selectLocationFragment2"
+            app:destination="@id/selectLocationFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/reminderListFragment2"
+        android:name="com.example.finalprojectlocation.reminderListFragment"
+        android:label="fragment_reminder_list"
+        tools:layout="@layout/fragment_reminder_list" >
+        <action
+            android:id="@+id/action_reminderListFragment2_to_saveRiminderFragment2"
+            app:destination="@id/saveRiminderFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectLocationFragment2"
+        android:name="com.example.finalprojectlocation.selectLocationFragment"
+        android:label="fragment_select_location"
+        tools:layout="@layout/fragment_select_location" />
+</navigation>
